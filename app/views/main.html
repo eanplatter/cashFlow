@@ -1,0 +1,84 @@
+<div class="jumbotron" ng-app='spareChange' >
+ <h3 >Welcome to cashFlow</h3>
+ <p>A simple way to manage your personal finances</p>
+</div>
+
+<div class="row marketing">
+
+ 
+
+  <div ng-controller="MainCtrl">
+   <h2 class='h'>Income: {{ inflow(income, otherIncome) | currency}}</h2>
+    <div class='block-income'>
+    <p class='title'>Primary Income: {{income | currency}}</p>
+    <input type="number" class="form-control" ng-model="income">
+   </div><div class='block-income'>
+    <p class='title'>Secondary Income: {{otherIncome | currency}}</p>
+    <input type="number" class="form-control" ng-model="otherIncome" >
+     </div>
+
+
+  <h2 class='h'>Expeditures:  {{ outflow(savings, food, rent, utilities, transport, debt, insurance, medical, clothing, school, other, other2) | currency}}</h2>
+    <div class='block'>
+    <p class='title'>Savings: {{savings | currency}}</p>
+    <input type="number" class="form-control" ng-model="savings">
+       </div>
+   <div class='block'>
+   <p class='title'>Food: {{food | currency}}</p>
+   <input type="number" class="form-control" ng-model="food">
+      </div>
+  <div class='block'>
+  <p class='title'>Mortage or Rent: {{rent | currency}}</p>
+    <input type="number" class="form-control" ng-model="rent">
+       </div>
+   <div class='block'>
+   <p class='title'>Utilities: {{utilities | currency}}</p>
+    <input type="number" class="form-control" ng-model='utilities'>
+     </div>
+ <div class='block'>
+ <p class='title'>Transportation:{{transport | currency}}</p>
+    <input type="number" class="form-control" ng-model="transport">
+    </div>
+ <div class='block'>
+   <p class='title'>Debt Payments: {{debt | currency}}</p>
+    <input type="number" class="form-control" ng-model="debt" >
+      </div>
+ <div class='block'>
+  <p class='title'>Insurance: {{insurance | currency}} </p>
+    <input type="number" class="form-control" ng-model="insurance">
+       </div>
+ <div class='block'>
+ <p class='title'>Medical Expenses: {{medical | currency}}</p>
+    <input type="number" class="form-control" ng-model="medical">
+      </div>
+ <div class='block'>
+  <p class='title'>Clothing: {{clothing | currency}}</p>
+    <input type="number" class="form-control" ng-model="clothing">
+      </div>
+  <div class='block'>
+  <p class='title'>School Expenses: {{school | currency}}</p>
+    <input type="number" class="form-control" ng-model="school">
+      </div>
+<div class='block'>
+<p class='title'>Phone: {{other | currency}}</p>
+    <input type="number" class="form-control" ng-model="other">
+       </div>
+  <div class='block'>
+  <p class='title'>Other: {{other2 | currency}}</p>
+    <input type="number" class="form-control" ng-model="other2">
+     </div>
+
+  
+
+<h2 class='h' class='over'>Money leftover:  {{ leftOvers(income, otherIncome, savings, food, rent, utilities, transport, debt, insurance, medical, clothing, school, other, other2) | currency}} </h2>
+  
+
+</div>
+
+  </div>
+
+
+
+
+</div>
+</div>
